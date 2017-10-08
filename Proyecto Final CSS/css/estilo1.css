@@ -1,22 +1,21 @@
 * {
 	margin:0px;
   padding: 0px;
-
 }
 body {
-  border: 2px solid red;
+/*  border: 2px solid red;*/
   background-color: black;
 	color: white;
   font-family: 'Dancing Script', cursive;
-	animation-name: contenidorbody-animacion;
-	animation-duration: 1s;
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	-o-animation-delay: 1s;
-	animation-delay: 1s;
+	animation-name: contenedorbody-animacion;
+	animation-duration: 1.5s;
+	-webkit-animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	-o-animation-delay: 1.5s;
+	animation-delay: 1.5s;
 }
 #Contenedorbody{
-  border: 2px solid yellow;
+/*  border: 2px solid yellow;*/
   width: 900px;
   margin: auto;
   margin-top: 20px;
@@ -52,9 +51,29 @@ a{
 .inic{
 	text-decoration: none;
 }
+
 nav ul li a{
   color: white;
   font-size: 1.5em;
+}
+nav ul li a:hover{
+  font-size: 1.7em;
+	text-shadow: 5px 5px 5px  white;
+}
+#imagen2 figcaption {
+	text-decoration: none;
+	color:white;
+	text-align: center;
+	font-size: 1.5em;
+  font-style: italic;
+}
+#imagen3 figcaption {
+	text-decoration: none;
+	color:white;
+	text-align: center;
+	font-size: 1.5em;
+  font-style: italic;
+  /*border: red dotted 1px;*/
 }
 #contenidoimagen{
   height: 805px;
@@ -109,10 +128,7 @@ nav ul li a{
 		filter: drop-shadow(5px 5px 5px #82c3a6  );
 
 }
-nav ul li a:hover{
-  font-size: 1.7em;
-	text-shadow: 5px 5px 5px  white;
-}
+
 #piepagina{
   clear: both;
   background: #C6d5c5;
@@ -134,6 +150,12 @@ nav ul li a:hover{
 #piepagina > div{
 	width: 25%;
 }
+.Contactos:hover{	background-color: #98FB98; border-bottom-left-radius: 30px;}
+.redes:hover{	background-color: #98FB98; border-radius: 30px;}
+.terminos:hover{	background-color: #98FB98; border-radius: 30px;}
+.derechos:hover{	background-color: #98FB98; 	border-bottom-right-radius: 30px;}
+
+
 .Contactos li{
   display: inline-block;
 	margin:1px;
@@ -153,70 +175,106 @@ img[src$=".svg"] {
     border-radius: 20px;
 }
 
-@keyframes contenidorbody-animacion {
+@keyframes contenedorbody-animacion {
 	0% {
 		position: relative;
-		top: 1000px
+		margin-top: 1000px;
 	}
 	25% {
 		position: relative;
-		top: 750px;
+		margin-top: 750px;
 	}
 	50% {
 		position: relative;
-		top: 500px;
+		margin-top: 500px;
 	}
 	75% {
 		position: relative;
-		top: 250px;
+		margin-top: 250px;
 	}
 	100% {
 		position: relative;
-		top: 0px;
+		margin-top: 0px;
 	}
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width:900px) {
 
 	#Contenedorbody
 	{
 		width: 100%;
 	}
+	.imagensecundario{
+		padding: 40px;
+	}
 }
-
-
-
-@media screen and (max-width: 800px){
+@media screen and (max-width: 880px){
 
 	#Contenedorbody
 	{
 		width: 100%;
-		margin: 0 auto;
+	}
+	#cabecera{
+		height: 100px;
+	}
+	header h1{
+		text-align: center;
+		margin-left: 150px;
+		padding: 0px;
+	}
+
+	nav ul{
+margin-left: 220px;}
+
+}
+
+
+@media screen and (max-width: 750px){
+
+	#Contenedorbody
+	{
+		width: 100%;
 	}
 	#cabecera{
 	  height: 100px;
 	}
+	header h1{
+		text-align: center;
+		margin-left: 170px;
+		padding: 0px;
+	}
 
+	nav ul{
+margin-left: 220px;}
 
 	#contenidoimagen{
-		height: 1120px;
+		height: 1265px;
 		display: flex;
 		flex-direction: column;
 	}
+
 		.imagencentral figure img{
-			width: 600px;
+			width: 690px;
 		  height: 350px;
 		}
 		.imagensecundario{
 			display: flex;
 			flex-direction: column;
 			padding: 5px;
+			padding-top: 60px;
 		}
 	.imagensecundario figure img{
-			width: 600px;
+			width: 690px;
 			height: 350px;
 			margin: auto;
-	}
+			}
+	.imagensecundario figcaption{
+				text-align: right;
+				margin-bottom:20px;
+			}
+	#imagen2{
+				margin-bottom: 50px;
+			}
 
 	#piepagina{
 			display: flex;
@@ -228,14 +286,13 @@ img[src$=".svg"] {
 	#piepagina > div {
 		width: 50%;
 	}
-
-
 	.Contactos li{
-		margin-left: 70px;
+		margin-left: 80px;
 	}
-	.Contactos{
-		background: grey;
+	.redes ul li{
+		margin-left: 80px;
 	}
+/*.derechos{background: yellow;}*/
 }
 
 @media screen and (max-width: 640px){
@@ -243,8 +300,6 @@ img[src$=".svg"] {
 	#Contenedorbody
 		{
 			width: 100%;
-			margin: 0;
-			padding: 0;
 		}
 		#cabecera
 		{
@@ -252,15 +307,15 @@ img[src$=".svg"] {
 		}
 		header h1{
 			text-align: center;
-			margin-left: 30px;
+			margin-left: 80px;
 			padding: 0px;
 		}
 
 		nav ul{
-	margin-left: 100px;}
+	margin-left: 140px;}
 
 	#contenidoimagen{
-		height: 1120px;
+		height: 1240px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -271,11 +326,21 @@ img[src$=".svg"] {
 		.imagensecundario{
 			display: flex;
 			flex-direction: column;
+			padding: 5px;
+			padding-top: 50px;
 		}
 	.imagensecundario figure img{
 			width: 580px;
 			height: 350px;
-	}
+			margin: auto;
+			}
+	.imagensecundario figcaption{
+				text-align: right;
+				margin-bottom:30px;
+			}
+	#imagen2, #imagen3{
+				margin-bottom: 10px;
+			}
 	#piepagina{
 			display: flex;
 			flex-flow: row wrap;
@@ -287,12 +352,8 @@ img[src$=".svg"] {
 	width: 50%;
 }
 
-	.Contactos{
-		background: red;
-	}
-	.terminos{
-		background: yellow;
-	}
+/*.derechos{	background: red;}*/
+
 }
 
 @media screen and (max-width: 480px){
@@ -300,8 +361,6 @@ img[src$=".svg"] {
 #Contenedorbody
 	{
 		width: 100%;
-		margin: 0;
-		padding: 0;
 	}
 	#cabecera
 	{
@@ -313,13 +372,14 @@ img[src$=".svg"] {
 		padding: 0px;
 	}
 	nav ul{
-margin-left: 100px;}
+margin-left: 80px;}
 
 #contenidoimagen{
-	height: 820px;
+	height: 890px;
 	display: flex;
 	flex-direction: column;
 }
+
 	.imagencentral figure img{
 		width: 410px;
 	  height: 250px;
@@ -327,11 +387,23 @@ margin-left: 100px;}
 	.imagensecundario{
 	  display: flex;
 	  flex-flow: column;
+		padding: 5px;
+		padding-top: 20px;
 	}
 .imagensecundario figure img{
 		width: 410px;
-		  height: 250px;
+		height: 250px;
+		margin: auto;
 }
+.imagensecundario figcaption{
+	text-align: right;
+	margin-bottom:20px;
+}
+
+#imagen2, #imagen3{
+	margin-bottom: 10px;
+}
+
 #piepagina{
 		display: flex;
 		flex-direction: column;
@@ -344,12 +416,14 @@ margin-left: 100px;}
 		margin: 1px;
 		padding: 3px;
 	}
-	.Contactos{
-		background: green;
+	.redes ul li{
+		margin-left: 100px;
 	}
+
+/*.derechos{	background: pink;}*/
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 350px){
 
 #Contenedorbody
 	{
@@ -361,10 +435,40 @@ margin-left: 100px;}
 	{
 	  height: 150px;
 	}
-
 	nav ul
 	{
 		margin-left: 20px;
 	}
+	#contenidoimagen{
+		height: 735px;
+		display: flex;
+		flex-direction: column;
+	}
+	.imagensecundario{
+		padding: 5px;
+		padding-top: 40px;
+	}
+	.imagencentral figure img{
+			width: 300px;
+			height: 190px;
+			margin: auto;
+	}
+	.imagensecundario figure img{
+			width: 300px;
+			height: 190px;
+			margin: auto;
+	}
 
+	.imagensecundario figcaption{
+		text-align: right;
+		margin-bottom:20px;
+	}
+
+	#imagen2, #imagen3{
+		margin-bottom: 10px;
+	}
+	.redes ul li{
+		margin-left: 40px;
+	}
+/*.derechos{	background: blue;}*/
 }

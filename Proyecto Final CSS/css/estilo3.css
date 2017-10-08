@@ -1,0 +1,357 @@
+* {
+	margin:0px;
+  padding: 0px;
+
+}
+body {
+/*  border: 2px solid red;*/
+  background-color: black;
+	color: white;
+  font-family: 'Dancing Script', cursive;
+
+}
+#Contenedorbody{
+/*  border: 2px solid yellow;*/
+  width: 900px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+	background-color: black;
+	color: white;
+}
+#cabecera{
+  height: 60px;
+  background:  #5b7989;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+header h1{
+  font-size: 35px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 200px;
+	text-shadow: 2px 3px  #02010a;
+}
+header h1, nav{
+  display: inline-block;
+  vertical-align: middle;
+}
+nav li{
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.inic{
+	text-decoration: none;
+}
+nav ul li a{
+  color: white;
+  font-size: 1.5em;
+}
+nav ul li a:hover{
+  font-size: 1.7em;
+	text-shadow: 5px 5px 5px  white;
+}
+#contenidoimagen {
+	display: flex;
+	flex-direction: column;
+}
+.contenedor img{
+	border: 1px solid black;
+  width: 250px;
+  -webkit-filter:drop-shadow(2px 2px 2px #02010a);
+  filter: drop-shadow(2px 2px 2px #02010a  );
+}
+
+.contenedor {
+  display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+  background-color: #d5c75f;
+}
+
+.contenedor > div {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+}
+
+#imagen1{
+opacity: 0.5;
+transition: opacity 1s;
+}
+.contenedor > div > img: hover{
+opacity: 1;
+}
+
+#imagen3 {
+  -webkit-filter:sepia(90%);
+  filter: sepia(90%);
+}
+
+#piepagina{
+  clear: both;
+  background: #C6d5c5;
+  height: 150px;
+  text-align: center;
+	display: flex;
+	flex-direction: row;
+	color: black;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+#piepagina h3{
+	font-size: 30px;
+	padding: 5px;
+}
+#piepagina h3:hover {
+		text-shadow: 2px 2px 2px black;
+}
+#piepagina > div{
+	width: 25%;
+}
+.Contactos:hover{	background-color: #E0FFFF; border-radius: 30px;color: red;}
+.redes:hover{	background-color: #E0FFFF; border-radius: 30px; color: red;}
+.terminos:hover{	background-color: #E0FFFF; border-radius: 30px;color: red;}
+.derechos:hover{	background-color: #E0FFFF; 	border-radius: 30px;color: red;}
+
+.Contactos li{
+  display: inline-block;
+	margin:1px;
+	padding: 1px;
+	float: left;
+	margin-left: 40px;
+}
+.redes ul li{
+	display: block;
+	float: left;
+	margin-left: 40px;
+}
+.derechos ul {
+	list-style: none;
+}
+img[src$=".svg"] {
+    border-radius: 20px;
+}
+
+
+@keyframes imagen2-animacion {
+	0% {
+		position: relative;
+		top: 0px
+	}
+	50% {
+		position: relative;
+		top: 23px;
+	}
+	100% {
+		position: relative;
+		top: 0px;
+	}
+}
+
+@keyframes imagen5-animacion {
+	0% {
+		position: relative;
+		bottom: 0px
+	}
+	50% {
+		position: relative;
+		bottom:23px;
+	}
+	100% {
+		position: relative;
+		bottom: 0px;
+	}
+}
+@keyframes imagen1y3-animacion {
+	0% {
+		position: relative;
+		top: 0px
+	}
+	50% {
+		position: relative;
+		top: 120px;
+	}
+	100% {
+		position: relative;
+		top: 0px;
+	}
+}
+
+@keyframes imagen4y6-animacion {
+	0% {
+		position: relative;
+		bottom: 0px
+	}
+	50% {
+		position: relative;
+		bottom:120px;
+	}
+	100% {
+		position: relative;
+		bottom: 0px;
+	}
+}
+#imagen2 {
+	animation-name: imagen2-animacion;
+	animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+#imagen5 {
+	animation-name: imagen5-animacion;
+	animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+#imagen1, #imagen3 {
+	animation-name: imagen1y3-animacion;
+	animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+#imagen4, #imagen6 {
+	animation-name: imagen4y6-animacion;
+	animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+
+#imagen1,#imagen2,#imagen3,#imagen4,#imagen5,#imagen6{
+	transition-property: width;
+	transition-duration: 0.5s;
+}
+
+#imagen1:hover{	width: 110%;}
+#imagen2:hover{	width: 110%;}
+#imagen3:hover{	width: 110%;}
+#imagen4:hover{	width: 110%;}
+#imagen5:hover{	width: 110%;}
+#imagen6:hover{	width: 110%;}
+
+
+@media screen and (max-width: 850px){
+
+	#Contenedorbody
+	{
+		width: 100%;
+	}
+	#cabecera{
+		height: 100px;
+	}
+	header h1{
+		text-align: center;
+		margin-left: 200px;
+		padding: 0px;
+	}
+
+	nav ul{ margin-left: 250px; }
+
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor img{   width: 720px;  }
+
+}
+
+
+@media all and (max-width: 640px) {
+
+  	#Contenedorbody
+  	{
+  		width: 100%;
+  	}
+  	#cabecera{
+  	  height: 150px;
+  	}
+  	header h1{
+  		text-align: center;
+  		margin-left: 120px;
+  		padding: 0px;
+  	}
+
+  	nav ul{  margin-left: 180px;}
+
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor > div{
+    background: white;
+  }
+  .contenedor img{   width: 500px;  }
+
+
+  #piepagina{
+			display: flex;
+			flex-flow: row wrap;
+			height: 400px;
+			margin: 0;
+			padding: 0;
+		}
+  #piepagina > div {
+  	width: 50%;
+  }
+
+}
+
+
+@media all and (max-width: 400px) {
+  #Contenedorbody
+  	{
+  		width: 100%;
+  	}
+  	#cabecera
+  	{
+  	  height: 150px;
+  	}
+    header h1{
+      text-align: center;
+      margin-left: 20px;
+      padding: 0px;
+    }
+    nav ul{  margin-left: 80px;}
+
+  	.contenedor{
+  		display: flex;
+  		flex-direction: column;
+  	}
+    .contenedor > div{
+      background: white;
+    }
+    .contenedor img{   width: 300px;  }
+
+    #piepagina{
+    		display: flex;
+    		flex-direction: column;
+    		height: 500px;
+    		margin: 0;
+    		padding: 0;
+    	}
+    #piepagina > div{
+    		width: 100%;
+    		margin: 1px;
+    		padding: 3px;
+    	}
+      .Contactos  li{
+        margin-left: 80px;
+      }
+    	.redes ul li{
+    		margin-left: 80px;
+    	}
+
+
+}
