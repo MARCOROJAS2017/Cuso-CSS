@@ -111,16 +111,23 @@ opacity: 1;
 	padding: 5px;
 }
 #piepagina h3:hover {
-		text-shadow: 2px 2px 2px black;
+		text-shadow: 4px 7px 7px white;
 }
 #piepagina > div{
 	width: 25%;
 }
-.Contactos:hover{	background-color: #E0FFFF; border-radius: 30px;color: red;}
+.Contactos:hover,.redes:hover,.terminos:hover,.derechos:hover {
+	border-radius: 30px;color: red;
+	background:white; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(circle, white, #87CEFA, #20B2AA); /* Safari */
+	background: -o-radial-gradient(circle, white, #87CEFA, #20B2AA); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, white, #87CEFA, #20B2AA); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, white, #87CEFA,#20B2AA); /* Standard syntax */
+}/*
 .redes:hover{	background-color: #E0FFFF; border-radius: 30px; color: red;}
 .terminos:hover{	background-color: #E0FFFF; border-radius: 30px;color: red;}
 .derechos:hover{	background-color: #E0FFFF; 	border-radius: 30px;color: red;}
-
+*/
 .Contactos li{
   display: inline-block;
 	margin:1px;
@@ -211,7 +218,7 @@ animation-duration: 8s;
 		  		width: 100%;
 		  	}
 		#cabecera
-				{ background: red;
+				{ /*background: red;*/
 					height: 100px;
 				}
 		header h1{
@@ -244,7 +251,7 @@ animation-duration: 8s;
 }
 @media all and (max-width: 400px) {
 	#cabecera
-	{ background: green;
+	{ /*background: green;*/
 		height: 130px;
 	}
 }
@@ -255,8 +262,8 @@ animation-duration: 8s;
   		width: 100%;
   	}
 	#cabecera
-	{ background: blue;
-		height: 130px;
+	{ /*background: blue;*/
+		height: 150px;
 	}
 
   	.contenedor{
@@ -267,10 +274,10 @@ animation-duration: 8s;
     .contenedor img{   width: 300px;  }
 		header h1{
 			text-align: center;
-			margin-left: 20px;
+			margin-left: 10px;
 			padding: 0px;
 		}
-		nav ul{  margin-left: 35px;}
+		nav ul{  margin-left: 15px;}
     #piepagina{
     		display: flex;
     		flex-direction: column;

@@ -1,19 +1,38 @@
 * {
 	margin:0px;
   padding: 0px;
+
 }
 body {
 /*  border: 2px solid red;*/
   background-color: black;
 	color: white;
   font-family: 'Dancing Script', cursive;
-	animation-name: contenedorbody-animacion;
-	animation-duration: 1.5s;
-	-webkit-animation-delay: 1.5s;
-	-moz-animation-delay: 1.5s;
-	-o-animation-delay: 1.5s;
-	animation-delay: 1.5s;
+
+	animation-name: animacion_body;
+	animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+
 }
+
+@keyframes animacion_body {
+	0% {
+		position: relative;
+		top: 1200px
+	}
+	50% {
+		position: relative;
+		top: 600px;
+	}
+	100% {
+		position: relative;
+		top: 0px;
+	}
+}
+
 #Contenedorbody{
 /*  border: 2px solid yellow;*/
   width: 900px;
@@ -45,13 +64,10 @@ nav li{
   vertical-align: top;
   padding: 10px;
 }
-a{
-  text-decoration: underline;
-}
+
 .inic{
 	text-decoration: none;
 }
-
 nav ul li a{
   color: white;
   font-size: 1.5em;
@@ -60,73 +76,78 @@ nav ul li a:hover{
   font-size: 1.7em;
 	text-shadow: 5px 5px 5px  white;
 }
-#imagen2 figcaption {
-	text-decoration: none;
-	color:white;
-	text-align: center;
-	font-size: 1.5em;
-  font-style: italic;
+#contenidoimagen {
+	display: flex;
+	flex-direction: column;
 }
-#imagen3 figcaption {
-	text-decoration: none;
-	color:white;
-	text-align: center;
-	font-size: 1.5em;
-  font-style: italic;
-  /*border: red dotted 1px;*/
+#contenidoimagen > .contenedorcentral > div{
+	-webkit-perspective: 500px; /* Chrome, Safari, Opera  */
+	 perspective: 500px;
 }
-#contenidoimagen{
-  height: 805px;
-  background: blue;
-}
-
-.imagencentral{
-  display: flex;
-  flex-direction: column;
+.contenedorcentral {
+  display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
   background-color: #82c3a6;
-	padding: 5px;
-}
-.imagencentral figure img{
-  width: 850px;
-  height: 450px;
-  display: block;
-  margin: auto;
-	-webkit-filter:drop-shadow(2px 2px 2px #02010a);
-	filter: drop-shadow(2px 2px 2px #02010a  );
-}
-.imagensecundario{
-  display: flex;
-  flex-direction: row;
-  background-color: #d5c75f;
-	padding: 40px;
-}
-.imagensecundario figure img{
-  width: 350px;
-  height: 250px;
-	-webkit-filter:drop-shadow(2px 2px 2px #02010a);
-	filter: drop-shadow(2px 2px 2px #02010a  );
-}
-.imagensecundario > div{
-	width: 50%;
-	text-align: center;
-}
-.imagensecundario > figcaption{
-	text-decoration-color: white;
-	text-align: center;s
-}
 
-#imagen2 img:hover{
+}
+.contenedorcentral figure img{
+	border: 1px solid black;
+	width: 800px;	height: 400px;
+  -webkit-filter:drop-shadow(2px 2px 2px #02010a);
+  filter: drop-shadow(2px 2px 2px #02010a  );
+}
+.contenedorcentral > div {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+
+}
+.contenedorsecundario {
+  display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+  background-color: #d5c75f;
+}
+.contenedorsecundario figure img{
+	border: 1px solid black;
+  width: 375px;
+  -webkit-filter:drop-shadow(2px 2px 2px #02010a);
+  filter: drop-shadow(2px 2px 2px #02010a  );
+}
+.contenedorsecundario > div {
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+	width: 100%;
+}
+#imagen2:hover{
 		border: 2px solid white;
 	-ms-transform: rotate(10deg); /* IE 9 */
 	-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
 	transform: rotate(10deg);
 }
-#imagen3 img:hover{
+#imagen3:hover{
 		border: 2px solid white;
 		transform: translate(20px,-5px);
 		-webkit-filter:drop-shadow(5px 5px 5px #82c3a6 );
 		filter: drop-shadow(5px 5px 5px #82c3a6  );
+}
 
+#contenidoimagen div div p {
+	text-decoration: none;
+	color:white;
+	text-align: center;
+	font-size: 1.7em;
+	font-style: italic;
+}
+#contenidoimagen>div>div>figure>p>a:visited{
+	color: blue;
+}
+#contenidoimagen>div>div>figure>p>a:hover{
+	text-shadow: 2px 3px 3px  #02010a;
+	color: white;
 }
 
 #piepagina{
@@ -150,11 +171,10 @@ nav ul li a:hover{
 #piepagina > div{
 	width: 25%;
 }
-.Contactos:hover{	background-color: #98FB98; border-bottom-left-radius: 30px;}
-.redes:hover{	background-color: #98FB98; border-radius: 30px;}
-.terminos:hover{	background-color: #98FB98; border-radius: 30px;}
-.derechos:hover{	background-color: #98FB98; 	border-bottom-right-radius: 30px;}
-
+.Contactos:hover{	background-color: rgb(129,247,159); border-radius: 30px;}
+.redes:hover{	background-color: rgb(129,247,159); border-radius: 30px;}
+.terminos:hover{	background-color:rgb(129,247,159); border-radius: 30px;}
+.derechos:hover{	background-color:rgb(129,247,159); 	border-radius: 30px;}
 
 .Contactos li{
   display: inline-block;
@@ -175,40 +195,21 @@ img[src$=".svg"] {
     border-radius: 20px;
 }
 
-@keyframes contenedorbody-animacion {
-	0% {
-		position: relative;
-		margin-top: 1000px;
-	}
-	25% {
-		position: relative;
-		margin-top: 750px;
-	}
-	50% {
-		position: relative;
-		margin-top: 500px;
-	}
-	75% {
-		position: relative;
-		margin-top: 250px;
-	}
-	100% {
-		position: relative;
-		margin-top: 0px;
-	}
+/*
+#imagen1,#imagen2,#imagen3{
+	transition-property: width;
+	transition-duration: 0.5s;
 }
 
-@media screen and (max-width:900px) {
+#imagen1:hover{	width: 90%;}
+#imagen2:hover{	width: 110%;}
+#imagen3:hover{	width: 90%;}*/
 
-	#Contenedorbody
-	{
-		width: 100%;
-	}
-	.imagensecundario{
-		padding: 40px;
-	}
+body{
+
 }
-@media screen and (max-width: 880px){
+
+@media screen and (max-width: 850px){
 
 	#Contenedorbody
 	{
@@ -219,256 +220,141 @@ img[src$=".svg"] {
 	}
 	header h1{
 		text-align: center;
-		margin-left: 150px;
+		margin-left: 200px;
 		padding: 0px;
 	}
 
-	nav ul{
-margin-left: 220px;}
+	nav ul{ margin-left: 250px; }
 
-}
+  .contenedorcentral{
+    display: flex;
+    flex-direction: column;
+  }
 
-
-@media screen and (max-width: 750px){
-
-	#Contenedorbody
-	{
-		width: 100%;
-	}
-	#cabecera{
-	  height: 100px;
-	}
-	header h1{
-		text-align: center;
-		margin-left: 170px;
-		padding: 0px;
-	}
-
-	nav ul{
-margin-left: 220px;}
-
-	#contenidoimagen{
-		height: 1265px;
-		display: flex;
-		flex-direction: column;
-	}
-
-		.imagencentral figure img{
-			width: 690px;
-		  height: 350px;
-		}
-		.imagensecundario{
-			display: flex;
-			flex-direction: column;
-			padding: 5px;
-			padding-top: 60px;
-		}
-	.imagensecundario figure img{
-			width: 690px;
-			height: 350px;
-			margin: auto;
-			}
-	.imagensecundario figcaption{
-				text-align: right;
-				margin-bottom:20px;
-			}
-	#imagen2{
-				margin-bottom: 50px;
-			}
-
-	#piepagina{
-			display: flex;
-			flex-flow: row wrap;
-			height: 400px;
-			margin: 0;
-			padding: 0;
-		}
-	#piepagina > div {
-		width: 50%;
-	}
-	.Contactos li{
-		margin-left: 80px;
-	}
-	.redes ul li{
-		margin-left: 80px;
-	}
-/*.derechos{background: yellow;}*/
-}
-
-@media screen and (max-width: 640px){
-
-	#Contenedorbody
-		{
-			width: 100%;
-		}
-		#cabecera
-		{
-		  height: 100px;
-		}
-		header h1{
-			text-align: center;
-			margin-left: 80px;
-			padding: 0px;
-		}
-
-		nav ul{
-	margin-left: 140px;}
-
-	#contenidoimagen{
-		height: 1240px;
-		display: flex;
-		flex-direction: column;
-	}
-		.imagencentral figure img{
-			width: 580px;
-		  height: 350px;
-		}
-		.imagensecundario{
-			display: flex;
-			flex-direction: column;
-			padding: 5px;
-			padding-top: 50px;
-		}
-	.imagensecundario figure img{
-			width: 580px;
-			height: 350px;
-			margin: auto;
-			}
-	.imagensecundario figcaption{
-				text-align: right;
-				margin-bottom:30px;
-			}
-	#imagen2, #imagen3{
-				margin-bottom: 10px;
-			}
-	#piepagina{
-			display: flex;
-			flex-flow: row wrap;
-			height: 400px;
-			margin: 0;
-			padding: 0;
-		}
-#piepagina > div {
-	width: 50%;
-}
-
-/*.derechos{	background: red;}*/
-
-}
-
-@media screen and (max-width: 480px){
-
-#Contenedorbody
-	{
-		width: 100%;
-	}
-	#cabecera
-	{
-	  height: 130px;
-	}
-	header h1{
-		text-align: center;
-		margin-left: 20px;
-		padding: 0px;
-	}
-	nav ul{
-margin-left: 80px;}
-
-#contenidoimagen{
-	height: 890px;
-	display: flex;
-	flex-direction: column;
-}
-
-	.imagencentral figure img{
-		width: 410px;
-	  height: 250px;
-	}
-	.imagensecundario{
-	  display: flex;
-	  flex-flow: column;
-		padding: 5px;
-		padding-top: 20px;
-	}
-.imagensecundario figure img{
-		width: 410px;
-		height: 250px;
-		margin: auto;
-}
-.imagensecundario figcaption{
-	text-align: right;
-	margin-bottom:20px;
-}
-
-#imagen2, #imagen3{
-	margin-bottom: 10px;
-}
-
-#piepagina{
-		display: flex;
-		flex-direction: column;
-		height: 500px;
-		margin: 0;
-		padding: 0;
-	}
-	#piepagina > div{
-		width: 100%;
-		margin: 1px;
-		padding: 3px;
-	}
-	.redes ul li{
-		margin-left: 100px;
-	}
-
-/*.derechos{	background: pink;}*/
-}
-
-@media screen and (max-width: 350px){
-
-#Contenedorbody
-	{
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	#cabecera
-	{
-	  height: 150px;
-	}
-	nav ul
-	{
-		margin-left: 20px;
-	}
-	#contenidoimagen{
-		height: 735px;
-		display: flex;
-		flex-direction: column;
-	}
-	.imagensecundario{
-		padding: 5px;
+	.contenedorsecundario{
+    display: flex;
+    flex-direction: column;
+  }
+	#contenidoimagen > .contenedorsecundario > div{
 		padding-top: 40px;
 	}
-	.imagencentral figure img{
-			width: 300px;
-			height: 190px;
-			margin: auto;
+	#contenidoimagen>div>div>figure>img{
+		width: 650px;
+		height: 400px;
 	}
-	.imagensecundario figure img{
-			width: 300px;
-			height: 190px;
-			margin: auto;
+	#contenidoimagen > div > div{
+		text-align: center;
+		padding: 5px;
+		margin: 5px;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 700px){
+	#contenidoimagen>div>div>figure>img{
+		width: 480px;
+		height: 300px;
+	}
+	#contenidoimagen > div > div{
+			text-align: center;
+			padding: 2px;
+			margin: 2px;
+			width: 100%;
+	}
+}
+
+@media all and (max-width: 640px) {
+
+	header h1{
+						text-align: center;
+						margin-left: 40px;
+						padding: 0px;
+					}
+	nav ul{  margin-left: 60px;}
+
+	#contenidoimagen>div>div>figure>img{
+		width: 500px;
+		height: 300px;
+		}
+
+  #piepagina{
+			display: flex;
+			flex-flow: row wrap;
+			height: 400px;
+			margin: 0;
+			padding: 0;
+		}
+  #piepagina > div {
+  	width: 50%;
+  }
+
+}
+@media all and (max-width: 500px) {
+	#contenidoimagen>div>div>figure>img{
+		width: 400px;
+		height:250px;
+	}
+}
+@media all and (max-width: 400px) {
+
+	#contenidoimagen>div>div>figure>img{
+		width: 300px;
+		height:220px;
 	}
 
-	.imagensecundario figcaption{
-		text-align: right;
-		margin-bottom:20px;
+	#cabecera
+	{ /*background: green;*/
+		height: 130px;
 	}
 
-	#imagen2, #imagen3{
-		margin-bottom: 10px;
-	}
-	.redes ul li{
-		margin-left: 40px;
-	}
-/*.derechos{	background: blue;}*/
+}
+
+@media all and (max-width: 350px) {
+
+		#cabecera
+			{ /*background: blue;*/
+				height: 150px;
+			}
+			#contenidoimagen>div>div>figure>img{
+				width: 250px;
+				height: 180px;
+			}
+
+    .contenedorsecundario{
+    	display: flex;
+    	flex-direction: column;
+    }
+
+		header h1{
+			text-align: center;
+			margin-left: 10px;
+			padding: 0px;
+
+		}
+		nav ul{  margin-left: 15px;}
+
+
+    .Contactos  li{
+        margin-left: 80px;
+      }
+    .redes ul li{
+    		margin-left: 80px;
+    	}
+		#contenidoimagen > div > div{
+				text-align: center;
+				padding: 2px;
+				margin: 2px;
+				width: 100%;
+		}
+		#piepagina{
+				display: flex;
+				flex-direction: column;
+				height: 500px;
+				margin: 0;
+				padding: 0;
+			}
+		#piepagina > div{
+				width: 100%;
+				margin: 1px;
+				padding: 3px;
+			}
 }
